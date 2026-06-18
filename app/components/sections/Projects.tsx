@@ -9,17 +9,27 @@ interface ProjectProps {
 
 const Projects: React.FC<ProjectProps> = ({ projects }) => {
   const [featuredProject, ...otherProjects] = projects;
+
+  if (!featuredProject) {
+    return null;
+  }
+
   return (
-    <Container id="projects" className="pt-48">
-      <SectionTitle title="projects" />
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-        {/* Featured project - spans 2 columns */}
-        <div className="lg:col-span-2 h-full">
-          <ProjectCard project={featuredProject} />
+    <Container id="projects" className="pt-28 lg:pt-32">
+      <div className="mb-8 text-center lg:mb-10">
+        <SectionTitle title="projects" className="mb-3" />
+        <p className="mx-auto max-w-2xl text-sm leading-6 text-neutral-600">
+          Selected builds across AI tools, product interfaces, and polished web
+          experiences.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 gap-4 lg:h-[min(56vh,30rem)] lg:grid-cols-3 lg:items-stretch">
+        <div className="lg:col-span-2 lg:min-h-0">
+          <ProjectCard project={featuredProject} featured />
         </div>
 
-        {/* Right column with two projects stacked */}
-        <div className="grid grid-rows-2 gap-4 h-full">
+        <div className="grid gap-4 lg:min-h-0 lg:grid-rows-2">
           {otherProjects
             .slice(0, 2)
             .reverse()
