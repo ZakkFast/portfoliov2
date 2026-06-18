@@ -86,9 +86,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           {eyebrow}
         </p>
         <h3
-          className={`pb-3 text-2xl font-bold leading-tight ${
+          className={`text-2xl font-bold leading-tight ${
             featured ? "lg:text-3xl" : "lg:text-2xl"
-          }`}
+          } ${featured ? "pb-3" : "pb-5"}`}
         >
           {title}
         </h3>
@@ -102,13 +102,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             </span>
           ))}
         </div>
-        <p
-          className={`max-w-2xl pb-5 text-sm leading-6 text-white/85 ${
-            featured ? "lg:line-clamp-3" : "lg:line-clamp-2"
-          }`}
-        >
-          {description}
-        </p>
+        {featured && (
+          <p className="max-w-2xl pb-5 text-sm leading-6 text-white/85 lg:line-clamp-3">
+            {description}
+          </p>
+        )}
 
         <div className="flex flex-row flex-wrap gap-3">
           {hasLiveUrl && (
