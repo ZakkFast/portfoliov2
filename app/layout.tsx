@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Navigation from "./components/layout/Navigation";
+import ThemeProvider from "./components/providers/ThemeProvider";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
@@ -25,13 +26,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} bg-white text-neutral-950 antialiased transition-colors duration-300 dark:bg-neutral-950 dark:text-neutral-100`}
       >
-        <Navigation />
-        {children}
-        <Analytics />
+        <ThemeProvider>
+          <Navigation />
+          {children}
+          <Analytics />
+        </ThemeProvider>
       </body>
     </html>
   );
