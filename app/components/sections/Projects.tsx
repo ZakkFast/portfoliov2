@@ -18,7 +18,7 @@ const Projects: React.FC<ProjectProps> = ({ projects }) => {
     <Container id="projects" className="pt-28 lg:pt-32">
       <div className="mb-8 text-center lg:mb-10">
         <SectionTitle title="projects" className="mb-3" />
-        <p className="mx-auto max-w-2xl text-lg text-gray-600 leading-relaxed">
+        <p className="mx-auto max-w-2xl text-lg text-gray-600 leading-relaxed dark:text-gray-300">
           Selected builds across AI tools, product interfaces, and polished web
           experiences.
         </p>

@@ -21,7 +21,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
   return (
     <article
-      className="group relative isolate h-full min-h-48 w-full overflow-hidden rounded-2xl border border-gray-400/20 bg-white shadow-[0_18px_55px_rgba(15,23,42,0.12)] aspect-[16/10] lg:aspect-auto lg:min-h-0"
+      className="group relative isolate h-full min-h-48 w-full overflow-hidden rounded-2xl border border-gray-400/20 bg-white shadow-[0_18px_55px_rgba(15,23,42,0.12)] aspect-[16/10] lg:aspect-auto lg:min-h-0 dark:border-white/10 dark:bg-neutral-900 dark:shadow-cyan-950/20"
     >
       {image ? (
         <Image
@@ -54,7 +54,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <div className="flex shrink-0 gap-2 lg:hidden">
           {hasLiveUrl && (
             <a
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white text-neutral-950"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white text-neutral-950 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300"
               target="_blank"
               rel="noopener noreferrer"
               href={liveUrl}
@@ -65,7 +65,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           )}
           {hasGithubUrl && (
             <a
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/15 text-white backdrop-blur-md"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/15 text-white backdrop-blur-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300"
               target="_blank"
               rel="noopener noreferrer"
               href={githubUrl}
@@ -111,7 +111,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <div className="flex flex-row flex-wrap gap-3">
           {hasLiveUrl && (
             <a
-              className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-medium text-neutral-950 transition hover:bg-cyan-100"
+              className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-medium text-neutral-950 transition hover:bg-cyan-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300"
               target="_blank"
               rel="noopener noreferrer"
               href={liveUrl}
@@ -122,7 +122,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           )}
           {hasGithubUrl && (
             <a
-              className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium text-white transition hover:bg-white/20"
+              className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium text-white transition hover:bg-white/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300"
               target="_blank"
               rel="noopener noreferrer"
               href={githubUrl}

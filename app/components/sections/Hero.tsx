@@ -20,11 +20,11 @@ const Hero = () => {
         <h1 className="text-4xl md:text-7xl text-center font-bold">
           Creating Digital
           <br /> Experiences That <br />
-          <span className="bg-gradient-to-r from-gray-800 to-cyan-400 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-gray-800 to-cyan-500 bg-clip-text text-transparent dark:from-white dark:to-cyan-300">
             Inspire & Engage
           </span>
         </h1>
-        <p className="text-xl text-center pt-8 max-w-3xl mx-auto">
+        <p className="text-xl text-center pt-8 max-w-3xl mx-auto text-gray-700 dark:text-gray-300">
           Turning complex problems into simple, elegant solutions. I craft web
           experiences that bridge the gap between what users need and the full
           potential of today&apos;s technology. From pixel-perfect designs to
@@ -34,7 +34,7 @@ const Hero = () => {
         <div className="text-center mt-8">
           <a
             href="#projects"
-            className="bg-cyan-400 hover:bg-cyan-500 text-white px-8 py-4 rounded-xl transition-colors duration-200 font-medium shadow-lg shadow-cyan-400/20 inline-block"
+            className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-4 rounded-xl transition-colors duration-200 font-medium shadow-lg shadow-cyan-400/20 inline-block focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400 dark:bg-cyan-300 dark:text-neutral-950 dark:hover:bg-cyan-200"
           >
             View My Work
           </a>
