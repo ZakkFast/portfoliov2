@@ -22,7 +22,7 @@ const Contact = () => {
     {
       icon: Github,
       label: "GitHub",
-      href: "https://github.com/Zakk-Fast",
+      href: "https://github.com/ZakkFast",
       external: true,
       download: false,
     },
