@@ -14,9 +14,9 @@ const Projects: React.FC<ProjectProps> = ({ projects }) => {
 
   return (
     <Container id="projects" className="pt-28 lg:pt-32">
-      <div className="mb-8 text-center lg:mb-10">
+      <div className="mb-8 max-w-3xl text-left lg:mb-10">
         <SectionTitle title="projects" className="mb-3" />
-        <p className="mx-auto max-w-2xl text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+        <p className="text-lg leading-relaxed text-gray-600 dark:text-gray-300">
           A few things I&apos;ve built that show how I approach problems,
           architecture, and implementation. Dig into a project for the decisions
           behind it, or jump straight to the code.
