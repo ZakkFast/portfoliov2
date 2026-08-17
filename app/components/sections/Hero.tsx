@@ -29,7 +29,10 @@ const Hero = () => {
   }, []);
 
   return (
-    <Container className="relative min-h-[92vh] pt-40 sm:pt-48" id="hero">
+    <Container
+      className="relative flex min-h-screen flex-col justify-center py-28 sm:py-32"
+      id="hero"
+    >
       <GeomotryShapes scrollY={scrollY} />
       <div className="relative z-10">
         <h1 className="text-center text-4xl font-bold tracking-tight sm:text-5xl md:text-7xl">
