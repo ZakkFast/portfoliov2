@@ -16,7 +16,7 @@ const Navigation = () => {
       >
         <div className="flex items-center justify-between">
           <a
-            href="#hero"
+            href="/#hero"
             className="text-xl font-semibold text-gray-800 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-400 dark:text-white"
             onClick={closeMenu}
           >
@@ -27,7 +27,7 @@ const Navigation = () => {
             <ul className="flex items-center space-x-8">
               <li>
                 <a
-                  href="#about"
+                  href="/#about"
                   className="text-gray-600 transition-colors hover:text-gray-900 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-400 dark:text-gray-300 dark:hover:text-white"
                 >
                   About
@@ -35,7 +35,7 @@ const Navigation = () => {
               </li>
               <li>
                 <a
-                  href="#projects"
+                  href="/#projects"
                   className="text-gray-600 transition-colors hover:text-gray-900 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-400 dark:text-gray-300 dark:hover:text-white"
                 >
                   Projects
@@ -43,7 +43,7 @@ const Navigation = () => {
               </li>
               <li>
                 <a
-                  href="#contact"
+                  href="/#contact"
                   className="text-gray-600 transition-colors hover:text-gray-900 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-400 dark:text-gray-300 dark:hover:text-white"
                 >
                   Contact
@@ -95,7 +95,7 @@ const Navigation = () => {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="#about"
+                  href="/#about"
                   className="block py-2 text-base font-medium text-gray-800 transition-colors hover:text-cyan-500 dark:text-gray-200 dark:hover:text-cyan-300"
                   onClick={closeMenu}
                 >
@@ -104,7 +104,7 @@ const Navigation = () => {
               </li>
               <li>
                 <a
-                  href="#projects"
+                  href="/#projects"
                   className="block py-2 text-base font-medium text-gray-800 transition-colors hover:text-cyan-500 dark:text-gray-200 dark:hover:text-cyan-300"
                   onClick={closeMenu}
                 >
@@ -113,7 +113,7 @@ const Navigation = () => {
               </li>
               <li>
                 <a
-                  href="#contact"
+                  href="/#contact"
                   className="block py-2 text-base font-medium text-gray-800 transition-colors hover:text-cyan-500 dark:text-gray-200 dark:hover:text-cyan-300"
                   onClick={closeMenu}
                 >
