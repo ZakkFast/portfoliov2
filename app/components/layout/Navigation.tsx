@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import ThemeToggle from "../ui/ThemeToggle";
 
@@ -15,39 +16,39 @@ const Navigation = () => {
         aria-label="Primary navigation"
       >
         <div className="flex items-center justify-between">
-          <a
+          <Link
             href="/#hero"
             className="text-xl font-semibold text-gray-800 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-400 dark:text-white"
             onClick={closeMenu}
           >
             zakk fast<span className="text-cyan-400">.</span>
-          </a>
+          </Link>
 
           <div className="hidden md:block">
             <ul className="flex items-center space-x-8">
               <li>
-                <a
+                <Link
                   href="/#about"
                   className="text-gray-600 transition-colors hover:text-gray-900 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-400 dark:text-gray-300 dark:hover:text-white"
                 >
                   About
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/#projects"
                   className="text-gray-600 transition-colors hover:text-gray-900 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-400 dark:text-gray-300 dark:hover:text-white"
                 >
                   Projects
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/#contact"
                   className="text-gray-600 transition-colors hover:text-gray-900 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-400 dark:text-gray-300 dark:hover:text-white"
                 >
                   Contact
-                </a>
+                </Link>
               </li>
               <li>
                 <ThemeToggle />
@@ -94,31 +95,31 @@ const Navigation = () => {
           <div className="w-64 rounded-xl border border-gray-400/30 bg-white/95 p-4 shadow-xl backdrop-blur-md dark:border-white/10 dark:bg-neutral-950/95">
             <ul className="space-y-3">
               <li>
-                <a
+                <Link
                   href="/#about"
                   className="block py-2 text-base font-medium text-gray-800 transition-colors hover:text-cyan-500 dark:text-gray-200 dark:hover:text-cyan-300"
                   onClick={closeMenu}
                 >
                   About
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/#projects"
                   className="block py-2 text-base font-medium text-gray-800 transition-colors hover:text-cyan-500 dark:text-gray-200 dark:hover:text-cyan-300"
                   onClick={closeMenu}
                 >
                   Projects
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/#contact"
                   className="block py-2 text-base font-medium text-gray-800 transition-colors hover:text-cyan-500 dark:text-gray-200 dark:hover:text-cyan-300"
                   onClick={closeMenu}
                 >
                   Contact
-                </a>
+                </Link>
               </li>
               <li className="border-t border-gray-400/30 pt-3 dark:border-white/10">
                 <ThemeToggle showLabel />
