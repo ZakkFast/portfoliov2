@@ -6,13 +6,13 @@ const About = () => {
     <Container className="pt-28 lg:pt-32" id="about">
       <SectionTitle title="about" />
 
-      <div className="mx-auto max-w-4xl text-center">
-        <h2 className="pb-4 text-3xl text-gray-950 lg:pb-6 lg:text-4xl dark:text-white">
+      <div className="max-w-4xl">
+        <h2 className="pb-4 text-left text-3xl text-gray-950 lg:pb-6 lg:text-4xl dark:text-white">
           I like understanding how things actually work
           <span className="text-4xl text-cyan-400 lg:text-5xl">.</span>
         </h2>
 
-        <div className="mx-auto max-w-3xl space-y-4 leading-relaxed text-gray-600 dark:text-gray-300">
+        <div className="max-w-3xl space-y-4 text-left leading-relaxed text-gray-600 dark:text-gray-300">
           <p>
             Most of my background is in web development, working across React
             and TypeScript frontends, Node backends, APIs, databases, and
@@ -32,7 +32,7 @@ const About = () => {
           </p>
         </div>
 
-        <div className="mx-auto mt-10 grid max-w-2xl gap-8 sm:grid-cols-2 sm:gap-16">
+        <div className="mt-10 grid max-w-2xl gap-8 text-left sm:grid-cols-2 sm:gap-16">
           <div>
             <h3 className="mb-4 text-lg font-semibold text-gray-800 dark:text-gray-100">
               Core
