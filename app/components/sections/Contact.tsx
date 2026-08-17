@@ -34,7 +34,7 @@ const Contact = () => {
     <Container className="min-h-[70vh] pt-32 pb-24 lg:pt-40" id="contact">
       <SectionTitle title="contact" />
 
-      <div className="mx-auto max-w-2xl text-center">
+      <div className="max-w-2xl text-left">
         <p className="mb-4 text-lg leading-relaxed text-gray-600 dark:text-gray-300">
           I&apos;m currently looking for software engineering opportunities,
           particularly backend or product-focused roles where I can solve real
@@ -45,7 +45,7 @@ const Contact = () => {
           I&apos;m always happy to talk shop.
         </p>
 
-        <div className="mb-10 grid grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:justify-center">
+        <div className="mb-10 grid grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:justify-start">
           {contactLinks.map((link) => {
             const IconComponent = link.icon;
             return (
