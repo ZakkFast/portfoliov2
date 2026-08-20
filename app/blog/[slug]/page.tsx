@@ -83,7 +83,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   return (
     <main className="min-h-screen pt-36 pb-20 sm:pt-40">
       <Container>
-        <article className="mx-auto max-w-3xl">
+        <article>
           <Link
             href="/blog"
             className="mb-10 inline-flex text-sm font-medium text-neutral-500 transition-colors hover:text-cyan-600 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-400 dark:text-neutral-400 dark:hover:text-cyan-300"
