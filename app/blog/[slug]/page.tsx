@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Container from "../../components/layout/Container";
@@ -117,11 +118,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </header>
 
           {post.heroImage && (
-            <img
+            <Image
               src={post.heroImage.url}
               alt={post.heroImage.description || post.heroImage.title}
-              width={post.heroImage.width}
-              height={post.heroImage.height}
+              width={post.heroImage.width || 1600}
+              height={post.heroImage.height || 900}
               className="mb-12 h-auto w-full rounded-xl border border-neutral-200 object-cover dark:border-white/10"
             />
           )}
