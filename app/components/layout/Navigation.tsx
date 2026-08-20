@@ -44,6 +44,14 @@ const Navigation = () => {
               </li>
               <li>
                 <Link
+                  href="/blog"
+                  className="text-gray-600 transition-colors hover:text-gray-900 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-400 dark:text-gray-300 dark:hover:text-white"
+                >
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/#contact"
                   className="text-gray-600 transition-colors hover:text-gray-900 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-400 dark:text-gray-300 dark:hover:text-white"
                 >
@@ -110,6 +118,15 @@ const Navigation = () => {
                   onClick={closeMenu}
                 >
                   Projects
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/blog"
+                  className="block py-2 text-base font-medium text-gray-800 transition-colors hover:text-cyan-500 dark:text-gray-200 dark:hover:text-cyan-300"
+                  onClick={closeMenu}
+                >
+                  Blog
                 </Link>
               </li>
               <li>
