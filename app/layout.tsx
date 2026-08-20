@@ -18,6 +18,11 @@ const geistMono = Geist_Mono({
 const description =
   "Software engineer with 4+ years of professional experience building web applications, APIs, and backend systems with TypeScript, React, Node.js, Python, and PostgreSQL.";
 
+const isPreviewDeployment =
+  process.env.VERCEL_ENV === "preview" ||
+  process.env.VERCEL_ENV === "development" ||
+  process.env.NODE_ENV === "development";
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://zakkfast.io"),
   title: {
@@ -54,8 +59,8 @@ export const metadata: Metadata = {
     description,
   },
   robots: {
-    index: true,
-    follow: true,
+    index: !isPreviewDeployment,
+    follow: !isPreviewDeployment,
   },
 };
 
