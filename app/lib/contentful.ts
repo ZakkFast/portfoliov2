@@ -86,6 +86,13 @@ interface ContentfulResponse {
   };
 }
 
+interface ContentfulConfig {
+  preview: boolean;
+  spaceId: string;
+  environment: string;
+  accessToken: string;
+}
+
 export function isContentfulPreview() {
   return (
     process.env.VERCEL_ENV === "preview" ||
@@ -94,7 +101,7 @@ export function isContentfulPreview() {
   );
 }
 
-function getContentfulConfig() {
+function getContentfulConfig(): ContentfulConfig | null {
   const preview = isContentfulPreview();
   const spaceId = process.env.CONTENTFUL_SPACE_ID;
   const environment = process.env.CONTENTFUL_ENVIRONMENT || "master";
@@ -103,6 +110,7 @@ function getContentfulConfig() {
     : process.env.CONTENTFUL_ACCESS_TOKEN;
 
   if (!spaceId || !accessToken) {
+    if (process.env.CI === "true") return null;
     throw new Error(`Missing Contentful ${preview ? "preview" : "delivery"} configuration`);
   }
 
@@ -151,7 +159,10 @@ function mapEntry(entry: ContentfulEntry, assets: Map<string, ContentfulAsset>):
 }
 
 async function fetchBlogEntries(params: Record<string, string>) {
-  const { preview, spaceId, environment, accessToken } = getContentfulConfig();
+  const config = getContentfulConfig();
+  if (!config) return [];
+
+  const { preview, spaceId, environment, accessToken } = config;
   const host = preview ? "preview.contentful.com" : "cdn.contentful.com";
   const searchParams = new URLSearchParams({
     content_type: "blogPost",
